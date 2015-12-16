@@ -1,0 +1,141 @@
+ <p class="p01">"Hello" my name is Sunny Boy and this is<br /> the car that I traveled in to go live with my<br /> new family.  
+        I traveled all the way from Texas<br /> to Arizona to be with them.  I am very excited<br /> to meet my new family and the other puppies<br /> in the home.
+        I also will be the baby of the<br /> family since I am the smallest.
+        
+        
+        <p class="p02">
+          Meet my new family and my new playmates.<br />
+        I enjoy spending time with them just relaxing<br /> and watching TV.
+        My new family shows all of us<br /> puppies lots and lots
+        of love.  </p>
+        
+        
+        This is the yard that we play in.<br />
+        We come out here and watch our<br /> family play ball and enjoy the sunshine.</p>
+        
+        
+        
+         <p class="p04">This is the park that I go to and play with<br /> the kids there.  I enjoy the park because<br /> I get to run or just watch the children play<br />
+        on the playground</p>
+        
+        
+        $(".talkone").hover(function(){
+      $(this).animate({opacity: 0}, 500);
+      }, function() {
+      $(this).animate({opacity: 2}, 500);
+      }, function() {
+      $(this).animate({opacity: 0}, 500);
+   });
+   
+   
+    // $(".puppyone").hover(function(){
+   //    $(".talkone").show(2000);
+   //    }, function(){
+   //    $(".talkone").hide(2000);
+   //    }, function(){
+   //    $(".talkone").stop();
+   // });
+   
+   $(".puppytwo").hover(function(){
+      $(".talktwo").show(2000);
+      }, function(){
+      $(".talktwo").hide(2000);
+      }, function(){
+      $('.talktwo').stop();
+   });
+   
+   $(".puppythree").hover(function(){
+      $(".talkthree").show(2000);
+      }, function(){
+      $(".talkthree").hide(2000);
+      }, function(){
+      $('.talkthree').stop();
+   });
+   
+   $(".puppyfour").hover(function(){
+      $(".talkfour").show(2000);
+      }, function(){
+      $(".talkfour").hide(2000);
+      }, function(){
+      $(".talkfour").stop();
+   });
+   
+   $(".puppyfive").hover(function(){
+      $(".talkfive").show(2000);
+      }, function(){
+      $(".talkfive").hide(2000);
+      }, function(){
+      $(".talkfive").stop();
+   });
+   
+   $(".puppysix").hover(function(){
+      $(".talksix").show(2000);
+      }, function(){
+      $(".talksix").hide(2000);
+      }, function(){
+      $(".talksix").stop();
+   });
+   
+   $(".puppyseven").hover(function(){
+      $(".talkseven").show(2000);
+      }, function(){
+      $(".talkseven").hide(2000);
+      }, function(){
+      $(".talkseven").stop();
+   });
+   
+   $(".puppyeight").hover(function(){
+      $(".talkeight").show(2000);
+      }, function(){
+      $(".talkeight").hide(2000);
+      }, function(){
+      $(".talkeight").stop();
+   });
+   
+   $(".puppynine").hover(function(){
+      $(".talknine").show(2000);
+      }, function(){
+      $(".talknine").hide(2000);
+      }, function(){
+      $(".talknine").stop();
+   });
+   
+   $(".puppyten").hover(function(){
+      $(".talkten").show(2000);
+      }, function(){
+      $(".talkten").hide(2000);
+      }, function(){
+      $(".talkten").stop();
+   });
+   
+   $(".puppyeleven").hover(function(){
+      $(".talkeleven").show(2000);
+      }, function(){
+      $(".talkeleven").hide(2000);
+      }, function(){
+      $(".talkeleven").stop();
+   });
+   
+   $(".puppytwelve").hover(function(){
+      $(".talktwelve").show(2000);
+      }, function(){
+      $(".talktwelve").hide(2000);
+      }, function(){
+      $(".talktwelve").stop();
+   });
+   
+   $(".puppythirteen").hover(function(){
+      $(".talkthirteen").show(2000);
+      }, function(){
+      $(".talkthirteen").hide(2000);
+      }, function(){
+      $(".talkthirteen").stop();
+   });
+   
+   $(".puppyfourteen").hover(function(){
+      $(".talkfourteen").show(2000);
+      }, function(){
+      $(".talkfourteen").hide(2000);
+      }, function(){
+      $(".talkfourteen").stop();
+   });

@@ -1,0 +1,796 @@
+/*body {*/
+/*  margin-top: 20px;*/
+/*  background-image: url(img/paws.png);*/
+/*  background-size: 100% 100%;*/
+/*  background-repeat: no-repeat;*/
+  
+/*}*/
+
+
+
+.flip-panel {
+  display: block;
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin-top: 0px;
+  margin-left: 950px;
+  perspective: 1200px;
+}
+
+.panel {
+  transition: z-index 1s ease-in-out 1s;
+}
+
+.panel,
+.panel .front,
+.panel .back {
+  position: absolute;
+  display: block;
+  /*top: 0;*/
+  /*left: 0;*/
+  width: 100%;
+  height: 100%;
+
+  -moz-transform-style: preserve-3d;
+  -moz-transition: -moz-transform 1s;
+  transform-style: preserve-3d;
+  transition: transform 1s, box-shadow 1s;
+}
+
+.panel .front {
+  /*background: red;*/
+  background: #00b4ff;
+  z-index: 2;
+
+  -moz-transform: rotateY(0deg);
+  -moz-transform-origin: left;
+  transform: rotateY(0deg);
+  transform-origin: left;
+  backface-visibility: hidden;
+}
+
+.panel .back {
+  /*background: green;*/
+  background: #00b4ff;
+  left: -100%;
+  z-index: 1;
+  
+  -moz-transform: rotateY(180deg);
+	-moz-transform-origin: right;
+	transform: rotateY(180deg);
+	transform-origin: right;
+  
+  backface-visibility: hidden;
+}
+
+.panel .front:hover {
+	-moz-transform: rotateY(-25deg);
+	-moz-transform-origin: left;
+	transform: rotateY(-25deg);
+	transform-origin: left;
+	box-shadow: 4px 4px 12px rgb(100,100,100);
+}
+
+.panel.open {
+  z-index: 1;
+}
+
+.panel.open .front {
+  z-index: 1;
+  -moz-transform: rotateY(-180deg);
+  -moz-transform-origin: left;
+  transform: rotateY(-180deg);
+  transform-origin: left;
+}
+
+.panel.open .back {
+  z-index: 2;
+  -moz-transform: rotateY(0deg);
+  -moz-transform-origin: right;
+  transform: rotateY(0deg);
+  transform-origin: right;  
+}
+
+
+/*separate pages*/
+/**/
+.panel .front .title {
+  /*background: red;*/
+  z-index: 2;
+ 
+  background: url(img/book_cover1.png);
+  -moz-transform: rotateY(0deg);
+  -moz-transform-origin: left;
+  transform: rotateY(0deg);
+  transform-origin: left;
+  backface-visibility: hidden;
+  position: absolute;
+  display: block;
+  /*top: 0;*/
+  margin-left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 32px;
+  color: #14568A;
+  margin-left: 40px;
+  margin-top: 30px;
+}
+
+h2 {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 32px;
+  color: #84A73E;
+  margin-left: 60px;
+  margin-top: -30px;
+}
+
+h3 {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 20px;
+  color: #231E1E;
+  margin-left: 80px;
+  margin-top: -25px;
+}
+
+h4 {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 12px;
+  color: #231E1E;
+  margin-left: 480px;
+  margin-top: 175px;
+}
+
+p {
+  font-family: 'Happy Monkey', cursive;
+}
+/*end of title page*/
+
+/*start of 2nd page*/
+.panel .back .contentone {
+  /*background: white;*/
+  z-index: 2;
+  /*background: url(img/state.png) no-repeat;*/
+  -moz-transform: rotateY(0deg);
+  -moz-transform-origin: left;
+  transform: rotateY(0deg);
+  transform-origin: left;
+  backface-visibility: hidden;
+  position: absolute;
+  display: block;
+  top: 20px;
+  left: 45px;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.puppyone {
+  /*background: blue;*/
+  width: 100px;
+  margin-left: 0px;
+  margin-top: -130px;
+}
+
+.talkone {
+  /*background: yellow;*/
+  width: 150px;
+  margin-left: 30px;
+  margin-top: -235px;
+  display: none;
+}
+.parone {
+  font-family: 'Happy Monkey', cursive;
+  font-size: 16px;
+  margin-left: 0px;
+  margin-top: 0px;
+  
+}
+/*end of 2nd page*/
+
+/*start of 3rd page*/
+.panel .front .contenttwo {
+  /*background: red;*/
+  z-index: 2;
+  /*background: url(img/car.png) no-repeat;*/
+  -moz-transform: rotateY(0deg);
+  -moz-transform-origin: left;
+  transform: rotateY(0deg);
+  transform-origin: left;
+  backface-visibility: hidden;
+  position: absolute;
+  display: block;
+  /*top: 0;*/
+  left: -20px;
+  width: 100%;
+  height: 100%;
+}
+
+.puppytwo {
+  /*background: blue;*/
+  width: 100px;
+  margin-left: 100px;
+  margin-top: -130px;
+}
+
+.talktwo {
+  /*background: yellow;*/
+  width: 150px;
+  margin-left: 120px;
+  margin-top: -240px;
+  display: none;
+}
+
+.partwo {
+  font-family: 'Happy Monkey', cursive;
+  font-size: 16px;
+  margin-left: 80px;
+  margin-top: -20px;
+
+}
+/*end of 3rd page*/
+
+/*start of 4th page*/
+.panel .back .contentthree {
+  /*background: red;*/
+  z-index: 2;
+  /*background: url(img/family.png);*/
+  background-repeat: no-repeat;
+  -moz-transform: rotateY(0deg);
+  -moz-transform-origin: left;
+  transform: rotateY(0deg);
+  transform-origin: left;
+  backface-visibility: hidden;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: -30px;
+  width: 100%;
+  height: 100%;
+}
+
+.puppythree {
+  /*background: blue;*/
+  width: 50px;
+  margin-left: 410px;
+  margin-top: -230px;
+}
+
+.talkthree {
+  /*background: yellow;*/
+  width: 150px;
+  margin-left: 390px;
+  margin-top: -170px;
+  display: none;
+}
+
+.parthree {
+  font-family: 'Happy Monkey', cursive;
+  font-size: 16px;
+  margin-left: 90px;
+  margin-top: 50px;
+}
+/*end of 4th page*/
+
+/*start of 5th page*/
+.panel .front .contentfour {
+  /*background: red;*/
+  z-index: 2;
+  /*background: url(img/yard.png);*/
+  background-repeat: no-repeat;
+  -moz-transform: rotateY(0deg);
+  -moz-transform-origin: left;
+  transform: rotateY(0deg);
+  transform-origin: left;
+  backface-visibility: hidden;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 30px;
+  width: 100%;
+  height: 100%;
+}
+
+.puppyfour {
+  /*background: blue;*/
+  width: 50px;
+  margin-left: 10px;
+  margin-top: -100px;
+}
+
+.talkfour {
+  /*background: yellow;*/
+  width: 150px;
+  margin-left: 25px;
+  margin-top: -250px;
+  display: none;
+}
+
+.parfour {
+  font-family: 'Happy Monkey', cursive;
+  font-size: 16px;
+  margin-left: 5px;
+  margin-top: 30px;
+}
+/*end of 5th page*/
+
+/*start of 6th page*/
+.panel .back .contentfive {
+  /*background: red;*/
+  z-index: 2;
+  /*background: url(img/park.png);*/
+  background-repeat: no-repeat;
+  -moz-transform: rotateY(0deg);
+  -moz-transform-origin: left;
+  transform: rotateY(0deg);
+  transform-origin: left;
+  backface-visibility: hidden;
+  position: absolute;
+  display: block;
+  /*top: 0;*/
+  left: 50px;
+  width: 100%;
+  height: 100%;
+}
+
+.puppyfive {
+  /*background: blue;*/
+  width: 50px;
+  margin-left: 20px;
+  margin-top: -180px;
+}
+
+.talkfive {
+  /*background: yellow;*/
+  width: 150px;
+  margin-left: -50px;
+  margin-top: -180px;
+  display: none;
+}
+
+.parfive {
+  font-family: 'Happy Monkey', cursive;
+  font-size: 16px;
+  margin-left: 0px;
+  margin-top: 100px;
+}
+/*end of 6th page*/
+
+/*start of 7th page*/
+.panel .front .contentsix {
+  /*background: red;*/
+  z-index: 2;
+  /*background: url(img/vet.png);*/
+  background-repeat: no-repeat;
+  -moz-transform: rotateY(0deg);
+  -moz-transform-origin: left;
+  transform: rotateY(0deg);
+  transform-origin: left;
+  backface-visibility: hidden;
+  position: absolute;
+  display: block;
+  /*top: 0;*/
+  left: 50px;
+  width: 100%;
+  height: 100%;
+}
+
+.puppysix {
+  /*background: blue;*/
+  width: 50px;
+  margin-left: 20px;
+  margin-top: -180px;
+}
+
+.talksix {
+  /*background: yellow;*/
+  width: 150px;
+  margin-left: 90px;
+  margin-top: 0px;
+  display: none;
+}
+
+.parsix {
+  font-family: 'Happy Monkey', cursive;
+  font-size: 16px;
+  margin-left: 0px;
+  margin-top: 185px;
+}
+/*end of 7th page*/
+
+/*start of 8th page*/
+.panel .back .contentseven {
+  /*background: red;*/
+  z-index: 2;
+  /*background: url(img/groom.png);*/
+  background-repeat: no-repeat;
+  -moz-transform: rotateY(0deg);
+  -moz-transform-origin: left;
+  transform: rotateY(0deg);
+  transform-origin: left;
+  backface-visibility: hidden;
+  position: absolute;
+  display: block;
+  /*top: 0;*/
+  left: 30px;
+  width: 100%;
+  height: 100%;
+}
+
+.puppyseven {
+  /*background: blue;*/
+  width: 50px;
+  margin-left: 400px;
+  margin-top: -150px;
+}
+
+.talkseven {
+  /*background: yellow;*/
+  width: 150px;
+  margin-left: 385px;
+  margin-top: -210px;
+  display: none;
+}
+
+.parseven {
+  font-family: 'Happy Monkey', cursive;
+  font-size: 16px;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+/*end of 8th page*/
+
+/*start of 9th page*/
+.panel .front .contenteight {
+  /*background: red;*/
+  z-index: 2;
+  /*background: url(img/puppy.png);*/
+  background-repeat: no-repeat;
+  /*background-position: center;*/
+  -moz-transform: rotateY(0deg);
+  -moz-transform-origin: left;
+  transform: rotateY(0deg);
+  transform-origin: left;
+  backface-visibility: hidden;
+  position: absolute;
+  display: block;
+  top: 0px;
+  left: 100px;
+  width: 100%;
+  height: 100%;
+}
+
+.puppyeight {
+  /*background: blue;*/
+  width: 275px;
+  margin-left: -50px;
+  margin-top: 90px;
+}
+
+.talkeight {
+  /*background: yellow;*/
+  width: 200px;
+  margin-left: 0px;
+  margin-top: -400px;
+  display: none;
+}
+
+.pareight {
+  font-family: 'Happy Monkey', cursive;
+  font-size: 16px;
+  margin-left: 220px;
+  margin-top: -150px;
+  /*background: blue;*/
+  /*width: 250px;*/
+}
+/*end of 9th page*/
+
+/*start of 10th page*/
+.panel .back .contentnine {
+  /*background: red;*/
+  z-index: 2;
+  /*background: url(img/bag.png);*/
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-transform: rotateY(0deg);
+  -moz-transform-origin: left;
+  transform: rotateY(0deg);
+  transform-origin: left;
+  backface-visibility: hidden;
+  position: absolute;
+  display: block;
+  top: 0px;
+  left: 50px;
+  width: 100%;
+  height: 100%;
+}
+
+.puppynine {
+  /*background: blue;*/
+  width: 75px;
+  margin-left: 38px;
+  margin-top: -155px;
+}
+
+.talknine {
+  /*background: yellow;*/
+  width: 150px;
+  margin-left: 30px;
+  margin-top: -20px;
+  display: none;
+}
+
+.parnine {
+  font-family: 'Happy Monkey', cursive;
+  font-size: 16px;
+  margin-left: 0px;
+  margin-top: 105px;
+}
+/*end of 10th page*/
+
+/*start of 11th page*/
+.panel .front .contentten {
+  /*background: red;*/
+  z-index: 2;
+  /*background: url(img/couch.png);*/
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-transform: rotateY(0deg);
+  -moz-transform-origin: left;
+  transform: rotateY(0deg);
+  transform-origin: left;
+  backface-visibility: hidden;
+  position: absolute;
+  display: block;
+  top: 0px;
+  left: 50px;
+  width: 100%;
+  height: 100%;
+}
+
+.puppyten {
+  /*background: blue;*/
+  width: 75px;
+  margin-left: 180px;
+  margin-top: -180px;
+}
+
+.talkten {
+  /*background: yellow;*/
+  width: 150px;
+  margin-left: 165px;
+  margin-top: -180px;
+  display: none;
+}
+
+.parten {
+  font-family: 'Happy Monkey', cursive;
+  font-size: 16px;
+  margin-left: 20px;
+  margin-top: 100px;
+}
+/*end of 11th page*/
+
+/*start of 12th page*/
+.panel .back .contenteleven {
+  /*background: red;*/
+  z-index: 2;
+  /*background: url(img/desk.png);*/
+  background-repeat: no-repeat;
+  /*background-position: center;*/
+  -moz-transform: rotateY(0deg);
+  -moz-transform-origin: left;
+  transform: rotateY(0deg);
+  transform-origin: left;
+  backface-visibility: hidden;
+  position: absolute;
+  display: block;
+  top: 0px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+}
+
+.puppyeleven {
+  /*background: blue;*/
+  width: 75px;
+  margin-left: 400px;
+  margin-top: -150px;
+}
+
+.talkeleven {
+  /*background: yellow;*/
+  width: 150px;
+  margin-left: 380px;
+  margin-top: -195px;
+  display: none;
+}
+
+.pareleven {
+  font-family: 'Happy Monkey', cursive;
+  font-size: 16px;
+  margin-left: 50px;
+  margin-top: 55px;
+}
+/*end of 12th page*/
+
+/*start of 13th page*/
+.panel .front .contenttwelve {
+  /*background: red;*/
+  z-index: 2;
+  /*background: url(img/paper.png);*/
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-transform: rotateY(0deg);
+  -moz-transform-origin: left;
+  transform: rotateY(0deg);
+  transform-origin: left;
+  backface-visibility: hidden;
+  position: absolute;
+  display: block;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.puppytwelve {
+  /*background: blue;*/
+  width: 75px;
+  margin-left: 150px;
+  margin-top: 110px;
+}
+
+.talktwelve {
+  /*background: yellow;*/
+  /*width: 150px;*/
+  margin-left: 260px;
+  margin-top: -400px;
+  display: none;
+}
+
+.partwelve {
+  font-family: 'Happy Monkey', cursive;
+  font-size: 16px;
+  margin-left: 30px;
+  margin-top: -150px;
+}
+/*end of 13th page*/
+
+/*start of 14th page*/
+.panel .back .contentthirteen {
+  /*background: red;*/
+  z-index: 2;
+  /*background: url(img/bed.png);*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: center;*/
+  -moz-transform: rotateY(0deg);
+  -moz-transform-origin: left;
+  transform: rotateY(0deg);
+  transform-origin: left;
+  backface-visibility: hidden;
+  position: absolute;
+  display: block;
+  top: 0px;
+  left: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.puppythirteen {
+  /*background: blue;*/
+  width: 100px;
+  margin-left: 150px;
+  margin-top: -260px;
+}
+
+.talkthirteen {
+  /*background: yellow;*/
+  /*width: 150px;*/
+  margin-left: 50px;
+  margin-top: -50px;
+  display: none;
+}
+
+.parthirteen {
+  font-family: 'Happy Monkey', cursive;
+  font-size: 16px;
+  margin-left: 30px;
+  margin-top: 190px;
+}
+/*end of 14th page*/
+
+/*start of 15th page*/
+.panel .front .contentfourteen {
+  /*background: red;*/
+  z-index: 2;
+  /*background: url(img/end.png);*/
+  background-repeat: no-repeat;
+  /*background-position: center;*/
+  -moz-transform: rotateY(0deg);
+  -moz-transform-origin: left;
+  transform: rotateY(0deg);
+  transform-origin: left;
+  backface-visibility: hidden;
+  position: absolute;
+  display: block;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.puppyfourteen {
+  /*background: blue;*/
+  /*width: 100px;*/
+  margin-left: 80px;
+  margin-top: -400px;
+}
+
+.talkfourteen{
+  /*background: yellow;*/
+  /*width: 150px;*/
+  margin-left: 235px;
+  margin-top: -280px;
+  display: none;
+}
+
+.parfourteen {
+  font-family: 'Happy Monkey', cursive;
+  font-size: 16px;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+/*end of 15th page*/
+
+/*start of 16th page*/
+.panel .back .contentfifteen {
+  background: #00b4ff;
+  z-index: 2;
+  /*background: url(img/bag.png);*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: center;*/
+  -moz-transform: rotateY(0deg);
+  -moz-transform-origin: left;
+  transform: rotateY(0deg);
+  transform-origin: left;
+  backface-visibility: hidden;
+  position: absolute;
+  display: block;
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.parfifteen {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.web {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 150px;
+}
+/*end of 16th page*/
+
+/*start of text*/
+#web {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.title {
+  margin-top: 0px;
+  margin-left: 750px;
+}
